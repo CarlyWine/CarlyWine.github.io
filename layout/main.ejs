@@ -1,19 +1,19 @@
-
-            <div class="vh-100 <%= vis %> text-white container-fluid Background_<%= type %>">
-                <div class="row header">
-                    <h2>Carly.Wine</h2>
+<div class="vh-100 <%= vis %> text-white container-fluid Background_<%= type %>">
+    <div class="row header">
+        <h2><%= config.header %></h2>
+    </div>
+    <div class="row h-75 AndvariBox">
+        <div class="container-fluid AndvariFill">
+            <% for (var i = 0; i < config.description.length; i++) { %>
+                <div class="row">
+                    <<%= config.description[i].type %> class="w-100 text-center">
+                        <%= config.description[i].text %>
+                    </<%= config.description[i].type %>>
                 </div>
-                <div class="row h-75 AndvariBox">
-                    <div class="container-fluid AndvariFill">
-                        <div class="row">
-                            <p class="w-100 text-center">Wine Recommendations</p>
-                        </div>
-                        <div class="row">
-                            <h4 class="w-100 text-center">The Secret Somm</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="row w-100 AndvariFill Footer">
-                    <h4 class="w-100 text-center"><a href="mailto:somm@carly.wine">somm@carly.wine</a></h4>
-                </div>
-            </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="row w-100 AndvariFill Footer">
+        <h4 class="w-100 text-center"><a href="mailto:<%= config.email %>"><%= config.email %></a></h4>
+    </div>
+</div>
