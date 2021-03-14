@@ -15,6 +15,7 @@
               crossorigin="anonymous">
     </head>
     <body>
+        <%- incude('navbar'); %>
         <div class="vh-100 vw-100 AndvariBox">
             <%- include('page-content', {vis: 'd-md-none', type: 'Port'}); %>
             <%- include('page-content', {vis: 'd-none d-md-block', type: 'Land'}); %>
