@@ -1,0 +1,11 @@
+<div class="vh-100 <%= vis %> text-white container-fluid Background_<%= type %>">
+    <div class="row header">
+        <h2><%= config.header %></h2>
+    </div>
+    <div class="row h-75 AndvariBox">
+        <%- include(page.layout); %>
+    </div>
+    <div class="row w-100 AndvariFill Footer">
+        <h4 class="w-100 text-center"><a href="mailto:<%= config.email %>"><%= config.email %></a></h4>
+    </div>
+</div>

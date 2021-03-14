@@ -3,11 +3,6 @@
     "title":        "Carly The Secret Somm",
     "header":       "Carly.Wine",
     "email":        "somm@carly.wine",
-    "description":  [
-        {"type": "p", "text": "Wine Recommendations"},
-        {"type": "p", "text": "Food Pairing Suggestions"},
-        {"type": "h4","text": "The Secret Somm"}
-    ],
     "theme":        "blog",
     "themeGit":     "git@github.com:Loki-Astari/andvari-theme-blog.git"
 }

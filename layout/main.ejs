@@ -1,19 +1,9 @@
-<div class="vh-100 <%= vis %> text-white container-fluid Background_<%= type %>">
-    <div class="row header">
-        <h2><%= config.header %></h2>
-    </div>
-    <div class="row h-75 AndvariBox">
-        <div class="container-fluid AndvariFill">
-            <% for (var i = 0; i < config.description.length; i++) { %>
-                <div class="row">
-                    <<%= config.description[i].type %> class="w-100 text-center">
-                        <%= config.description[i].text %>
-                    </<%= config.description[i].type %>>
-                </div>
-            <% } %>
+<div class="container-fluid AndvariFill">
+    <% for (var i = 0; i < page.description.length; i++) { %>
+        <div class="row">
+            <<%= page.description[i].type %> class="w-100 text-center">
+                <%= page.description[i].text %>
+            </<%= page.description[i].type %>>
         </div>
-    </div>
-    <div class="row w-100 AndvariFill Footer">
-        <h4 class="w-100 text-center"><a href="mailto:<%= config.email %>"><%= config.email %></a></h4>
-    </div>
+    <% } %>
 </div>
