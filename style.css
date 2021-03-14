@@ -1,0 +1,22 @@
+div.AndvariBox {
+    position:   relative;
+}
+div.AndvariFill {
+    position:   absolute;
+    bottom:     0
+}
+
+div.Background_Port {
+    background-image:   url('img/back.port.jpg');
+    background-size:    cover;
+}
+div.Background_Land {
+    background-image:   url('img/back.land.jpg');
+    background-size:    cover;
+}
+
+div.Footer  {
+    padding:    20px;
+    background-color:   #38383c;
+}
+
