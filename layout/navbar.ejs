@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#"><%= config.header %></a>
     <button class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -11,8 +11,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Recomendations</a>
+            <% for (var i=0; i < config.menu.length; i++) { %>
+                <% if (config.menu[i].disp == page.layout) { %>
+                    <a class="nav-item nav-link active" href="#"><%= config.menu[i].disp %> <span class="sr-only">(current)</span></a>
+                <% } else { %>
+                    <a class="nav-item nav-link" href="<%= config.menu[i].page %>.html"><%= config.menu[i].disp %></a>
+                <% } %>
+            <% } %>
         </div>
     </div>
 </nav>

@@ -3,6 +3,10 @@
     "title":        "Carly The Secret Somm",
     "header":       "Carly.Wine",
     "email":        "somm@carly.wine",
+    "menu":         [
+                        {"page": "index", "disp":"Home"},
+                        {"page": "rec",   "disp":"Recommendations"}
+                    ],
     "theme":        "blog",
     "themeGit":     "git@github.com:Loki-Astari/andvari-theme-blog.git"
 }

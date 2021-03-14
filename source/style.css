@@ -1,3 +1,20 @@
+@media (max-width: 425px) {
+    body {
+        background-image:   url('img/back.port.jpg');
+    }
+}
+@media (min-width: 426px) {
+    body {
+        background-image:   url('img/back.land.jpg');
+    }
+}
+body {
+    background-size:        cover;
+    background-attachment:  fixed;
+}
+div.AndvariMain {
+    margin-top:             72px;
+}
 div.AndvariBox {
     position:   relative;
 }
@@ -6,17 +23,15 @@ div.AndvariFill {
     bottom:     0
 }
 
-div.Background_Port {
-    background-image:   url('img/back.port.jpg');
-    background-size:    cover;
-}
-div.Background_Land {
-    background-image:   url('img/back.land.jpg');
-    background-size:    cover;
-}
-
 div.Footer  {
-    padding:    20px;
     background-color:   #38383c;
+    padding:    20px;
+
+    position:   fixed;
+    left:       0;
+    bottom:     0;
+    width:      100%;
+    color:      white;
+    text-align: center;
 }
 

@@ -1,7 +1,5 @@
 ---
-layout: main
-menu:   blog
-count:  true
+layout: Home
 description:
     - "type": "p"
       "text": "Wine Recommendations"
