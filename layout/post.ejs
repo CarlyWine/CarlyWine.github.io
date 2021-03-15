@@ -1,0 +1,85 @@
+<div style="padding-bottom:92px">
+<div style="margin:5px;padding-left:10px;padding-right:10px;width:100%;background-color: gray;opacity: .9;border-radius: 10px;">
+    <h4 class="AndvariDynSizeSmall"><a href="<%= page.permpath  %><%= page.permsrc %>"><%= page.Wine %> : <%= page.Year %> : <%= page.Vinyard %></a></h4>
+    <div class="row">
+        <div class="col-8">
+                <table class="table table-striped">
+                    <thead>
+                        <tr> <th scope="col">Info</th> <th scope="col">Value</th> </tr>
+                    </thead>
+                    <tbody>
+                        <tr> <td>Author</td> <td><%= page.Author %></td> </tr>
+                        <tr> <td>Vinyard</td> <td><%= page.Vinyard %></td> </tr>
+                        <tr> <td>Wine</td> <td><%= page.Wine %> <%= page.Year %></td> </tr>
+                        <tr> <td>Grape</td>
+                             <td>
+                                <table class="table table-striped">
+                                <tbody>
+                                    <% for (var i in page.Grape) {
+                                        var grape = page.Grape[i]; %>
+                                        <tr><td><%= grape.percent %>%</td><td><%= grape.grape %></td></tr>
+                                    <% } %>
+                                </tbody>
+                                </table>
+                             </td></tr>
+                        <tr> <td>Award</td>
+                            <td>
+                                <table class="table table-striped">
+                                <tbody>
+                                    <% for (var i in page.Award) {
+                                        var award = page.Award[i]; %>
+                                        <tr><td><%= award.event %></td><td><%= award.position %></td></tr>
+                                    <% } %>
+                                </tbody>
+                                </table>
+                            </td></tr>
+                    </tbody>
+                </table>
+        </div>
+        <div class="col-4">
+                    <img src="img/<%= page.Image %>" style="width:100%">
+        </div>
+    </div>
+    <%
+        var lines = page.content.split('\n');
+        for (var i in lines) {
+            if (lines[i] == "") {
+                continue;
+            } %>
+        <p class="AndvariDynSizeSmall"><%= lines[i] %></p>
+    <% } %>
+</div>
+</div>
+<!--
+title:      '',
+draft:      false,
+generate:   true,
+date:       '2021/01/05 13:01:01Z0',
+updated:    2021-03-15T01:33:17.857Z,
+comments:   true,
+comment:    'disque',
+layout:     'post',
+content:    'Text',
+full_source: 'source/posts/2021-01-05-13-01-01.md',
+source:     'posts/2021-01-05-13-01-01.md',
+path:       'posts-2021-01-05-13-01-01.html',
+permlink:   'https://Carly.Wine/',
+prev:        null,
+next:       <ref *2>
+raw: 
+link:       '',
+series:     [],
+categories: [],
+tags:       [],
+srcLoc:     'source/',
+Author:     'Carly',
+Vinyard:    'Two Vintners',
+Wine:       'Fine Wine',
+Year:       2020,
+Grape:      [{ percent: 80, grape: 'CabFranc' },{ percent: 20, grape: 'Syrah' } ],
+Award:      [ { event: 'Wine Spectator', position: 'Gold' } ],
+Image:      'wine.pic.jpg',
+permpath:   '',
+permsrc:    'posts-2021-01-05-13-01-01.html',
+rootpath:   ''
+-->

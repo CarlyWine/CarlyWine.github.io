@@ -15,7 +15,7 @@
                 <% if (config.menu[i].disp == page.layout) { %>
                     <a class="nav-item nav-link active" href="#"><%= config.menu[i].disp %> <span class="sr-only">(current)</span></a>
                 <% } else { %>
-                    <a class="nav-item nav-link" href="<%= config.menu[i].page %>.html"><%= config.menu[i].disp %></a>
+                    <a class="nav-item nav-link" href="<%= page.rootpath %><%= config.menu[i].page %>.html"><%= config.menu[i].disp %></a>
                 <% } %>
             <% } %>
         </div>

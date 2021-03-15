@@ -2,12 +2,31 @@
     body {
         background-image:   url('img/back.port.jpg');
     }
+    h4.AndvariDynSizeSmall {
+        font-size:          medium;
+    }
+    p.AndvariDynSizeSmall {
+        font-size:          small;
+    };
 }
 @media (min-width: 426px) {
     body {
         background-image:   url('img/back.land.jpg');
     }
+    h4.AndvariDynSizeSmall {
+        font-size:          large;
+    }
+    p.AndvariDynSizeSmall {
+        font-size:          medium;
+    };
 }
+p.AndvariDynSize {
+    font-size:              3.0vw;
+}
+h4.AndvariDynSize {
+    font-size:              5.9vw;
+}
+
 body {
     background-size:        cover;
     background-attachment:  fixed;

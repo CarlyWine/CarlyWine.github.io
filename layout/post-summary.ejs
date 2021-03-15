@@ -1,0 +1,23 @@
+<div style="margin:5px;padding-left:10px;padding-right:10px;width:100%;height:100%;background-color: gray;opacity: .9;border-radius: 10px;">
+    <h4 class="AndvariDynSizeSmall"><a href="<%= post.permpath  %><%= post.permsrc %>"><%= post.Wine %> : <%= post.Year %> : <%= post.Vinyard %></a></h3>
+    <%
+        var lines = (post.content.substring(0,200) + '...').split('\n');
+        for (var i in lines) {
+            if (lines[i] == "") {
+                continue;
+            } %>
+        <p class="AndvariDynSizeSmall"><%= lines[i] %></p>
+    <% } %>
+<!--
+layout:     post
+date:       2021/01/01 13:01:01Z0
+Author:     Carly
+Vinyard:    Elavation
+Wine:       Monolith
+Year:       2018
+Grape:      [{"percent": 80, "grape": "CabFranc"},{"percent":20, "grape": "Syrah"}]
+Award:      [{"event": "Wine Spectator", "position": "Gold"}]
+Image:      wine.pic.jpg
+content:    Multiple lines
+-->
+</div>
