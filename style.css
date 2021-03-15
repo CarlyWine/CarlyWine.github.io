@@ -1,3 +1,39 @@
+@media (max-width: 425px) {
+    body {
+        background-image:   url('img/back.port.jpg');
+    }
+    h4.AndvariDynSizeSmall {
+        font-size:          medium;
+    }
+    p.AndvariDynSizeSmall {
+        font-size:          small;
+    };
+}
+@media (min-width: 426px) {
+    body {
+        background-image:   url('img/back.land.jpg');
+    }
+    h4.AndvariDynSizeSmall {
+        font-size:          large;
+    }
+    p.AndvariDynSizeSmall {
+        font-size:          medium;
+    };
+}
+p.AndvariDynSize {
+    font-size:              3.0vw;
+}
+h4.AndvariDynSize {
+    font-size:              5.9vw;
+}
+
+body {
+    background-size:        cover;
+    background-attachment:  fixed;
+}
+div.AndvariMain {
+    margin-top:             72px;
+}
 div.AndvariBox {
     position:   relative;
 }
@@ -18,5 +54,17 @@ div.Background_Land {
 div.Footer  {
     padding:    20px;
     background-color:   #38383c;
+}
+
+div.FooterNew  {
+    background-color:   #38383c;
+    padding:    20px;
+
+    position:   fixed;
+    left:       0;
+    bottom:     0;
+    width:      100%;
+    color:      white;
+    text-align: center;
 }
 
