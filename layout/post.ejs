@@ -1,5 +1,5 @@
-<div style="padding-bottom:92px">
-<div style="margin:5px;padding-left:10px;padding-right:10px;width:100%;background-color: gray;opacity: .9;border-radius: 10px;">
+<div class="PostPage">
+<div class="PostItem">
     <h4 class="AndvariDynSizeSmall"><a href="<%= page.permpath  %><%= page.permsrc %>"><%= page.Wine %> : <%= page.Year %> : <%= page.Vinyard %></a></h4>
     <div class="row">
         <div class="col-8">
@@ -8,20 +8,20 @@
                         <tr> <th scope="col">Info</th> <th scope="col">Value</th> </tr>
                     </thead>
                     <tbody>
-                        <tr> <td>Author</td> <td><%= page.Author %></td> </tr>
-                        <tr> <td>Vinyard</td> <td><%= page.Vinyard %></td> </tr>
+                        <tr> <td>Winery</td> <td><%= page.Winery %></td> </tr>
                         <tr> <td>Wine</td> <td><%= page.Wine %> <%= page.Year %></td> </tr>
                         <tr> <td>Grape</td>
                              <td>
                                 <table class="table table-striped">
                                 <tbody>
-                                    <% for (var i in page.Grape) {
-                                        var grape = page.Grape[i]; %>
-                                        <tr><td><%= grape.percent %>%</td><td><%= grape.grape %></td></tr>
+                                    <% for (const grape in page.Grape) {
+                                        var percent = page.Grape[grape]; %>
+                                        <tr><td><%= percent %>%</td><td><%= grape %></td></tr>
                                     <% } %>
                                 </tbody>
                                 </table>
                              </td></tr>
+                        <% if (page.Award) { %>
                         <tr> <td>Award</td>
                             <td>
                                 <table class="table table-striped">
@@ -32,14 +32,44 @@
                                     <% } %>
                                 </tbody>
                                 </table>
-                            </td></tr>
+                            </td>
+                        </tr>
+                        <% } %>
+                        <tr>
+                            <td>Taste</td>
+                            <td>
+                                <table style="width:100%">
+                                <% for (const info in page.Taste) { %>
+                                    <% var name = info.split('-'); %>
+                                    <tr style="width:100%">
+                                        <td><%= name[0]  %></td>
+                                        <td style="width:100%">
+                                        <div class="slidecontainer">
+                                            <input style="width:100%" type="range" min="1" max="100" value="<%= page.Taste[info] %>" class="slider" readonly />
+                                        </div>
+                                        </td>
+                                        <td><%= name[1] %></td>
+                                    </tr>
+                                <% } %>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Notes</td>
+                            <td>
+                                <% for (const info in page.Notes) { %>
+                                    <%= info %><br>
+                                <% } %>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
         </div>
         <div class="col-4">
-                    <img src="img/<%= page.Image %>" style="width:100%">
+                    <img class="PostImg" src="/img/<%= page.Image %>">
         </div>
     </div>
+    <div class="Author">Author: <%= page.Author %></div>
     <%
         var lines = page.content.split('\n');
         for (var i in lines) {
@@ -50,36 +80,3 @@
     <% } %>
 </div>
 </div>
-<!--
-title:      '',
-draft:      false,
-generate:   true,
-date:       '2021/01/05 13:01:01Z0',
-updated:    2021-03-15T01:33:17.857Z,
-comments:   true,
-comment:    'disque',
-layout:     'post',
-content:    'Text',
-full_source: 'source/posts/2021-01-05-13-01-01.md',
-source:     'posts/2021-01-05-13-01-01.md',
-path:       'posts-2021-01-05-13-01-01.html',
-permlink:   'https://Carly.Wine/',
-prev:        null,
-next:       <ref *2>
-raw: 
-link:       '',
-series:     [],
-categories: [],
-tags:       [],
-srcLoc:     'source/',
-Author:     'Carly',
-Vinyard:    'Two Vintners',
-Wine:       'Fine Wine',
-Year:       2020,
-Grape:      [{ percent: 80, grape: 'CabFranc' },{ percent: 20, grape: 'Syrah' } ],
-Award:      [ { event: 'Wine Spectator', position: 'Gold' } ],
-Image:      'wine.pic.jpg',
-permpath:   '',
-permsrc:    'posts-2021-01-05-13-01-01.html',
-rootpath:   ''
--->
