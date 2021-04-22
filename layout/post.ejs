@@ -42,13 +42,13 @@
                                 <% for (const info in page.Taste) { %>
                                     <% var name = info.split('-'); %>
                                     <tr style="width:100%">
-                                        <td><%= name[0]  %></td>
+                                        <td class="AndvariDynSizeSmall"><%= name[0]  %></td>
                                         <td style="width:100%">
                                         <div class="slidecontainer">
                                             <input style="width:100%" type="range" min="1" max="100" value="<%= page.Taste[info] %>" class="slider" readonly />
                                         </div>
                                         </td>
-                                        <td><%= name[1] %></td>
+                                        <td class="AndvariDynSizeSmall"><%= name[1] %></td>
                                     </tr>
                                 <% } %>
                                 </table>

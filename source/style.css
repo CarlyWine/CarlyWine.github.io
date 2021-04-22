@@ -5,7 +5,7 @@
     h4.AndvariDynSizeSmall {
         font-size:          medium;
     }
-    p.AndvariDynSizeSmall {
+    .AndvariDynSizeSmall {
         font-size:          small;
     };
 }
@@ -16,7 +16,7 @@
     h4.AndvariDynSizeSmall {
         font-size:          large;
     }
-    p.AndvariDynSizeSmall {
+    .AndvariDynSizeSmall {
         font-size:          medium;
     };
 }
